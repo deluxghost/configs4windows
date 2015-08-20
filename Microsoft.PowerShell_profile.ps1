@@ -4,7 +4,7 @@ Set-Alias ll Get-ChildItem
 Remove-Item alias:cd
 
 function cd {
-    if($args.length -eq 0) {
+    if ($args.length -eq 0) {
         Set-Location "$($env:homedrive)$($env:homepath)"
     } else {
         Set-Location ($args -join " ")
@@ -12,7 +12,7 @@ function cd {
 }
 
 function ping {
-    if($args.length -eq 0) {
+    if ($args.length -eq 0) {
         ping.exe
     } else {
         ping.exe -t ($args -join " ")
@@ -22,7 +22,7 @@ function ping {
 function prompt {
     $Host.UI.RawUI.WindowTitle = "PowerShell" + " (" + $pwd.Provider.Name + ") " + $pwd.Path
 
-    if((New-Object Security.Principal.WindowsPrincipal (
+    if ((New-Object Security.Principal.WindowsPrincipal (
             [Security.Principal.WindowsIdentity]::GetCurrent())
         ).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator))
     {
