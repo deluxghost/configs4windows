@@ -1,14 +1,28 @@
 clear
 
-New-Alias "cd~" "cd ~"
+Set-Alias ll Get-ChildItem
+Remove-Item alias:cd
 
-function prompt
-{
+function cd {
+    if($args.length -eq 0) {
+        Set-Location "$($env:homedrive)$($env:homepath)"
+    } else {
+        Set-Location ($args -join " ")
+    }
+}
+
+function ping {
+    if($args.length -eq 0) {
+        ping.exe
+    } else {
+        ping.exe -t ($args -join " ")
+    }
+}
+
+function prompt {
     $Host.UI.RawUI.WindowTitle = "PowerShell" + " (" + $pwd.Provider.Name + ") " + $pwd.Path
-    Write-Host "[" -nonewline -foregroundcolor DarkGray
 
-    if( (
-        New-Object Security.Principal.WindowsPrincipal (
+    if((New-Object Security.Principal.WindowsPrincipal (
             [Security.Principal.WindowsIdentity]::GetCurrent())
         ).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator))
     {
@@ -22,10 +36,10 @@ function prompt
     Write-Host $env:COMPUTERNAME -nonewline -foregroundcolor Green
 
     if ($pwd.Provider.Name -ne "FileSystem") {
-        Write-Host  " $($pwd.Provider.Name)" -nonewline -foregroundcolor DarkCyan
+        Write-Host  " #$($pwd.Provider.Name)" -nonewline -foregroundcolor DarkCyan
     }
-
-    Write-Host "] " -nonewline -foregroundcolor DarkGray
+    
+    Write-Host  " " -nonewline
 
     if ($pwd.Path -eq "$($env:homedrive)$($env:homepath)") {
         Write-Host ~~ -nonewline -foregroundcolor Yellow
@@ -39,5 +53,5 @@ function prompt
     Write-Host "`b `n" -nonewline -foregroundcolor Gray
     Write-Host ">>" -nonewline -foregroundcolor Red
 
-    return " "
+    return " `b"
 }
