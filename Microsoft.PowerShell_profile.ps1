@@ -50,7 +50,7 @@ function prompt {
         }
     }
 
-    Write-Host "`b `n" -nonewline -foregroundcolor Gray
+    Write-Host "`b " -foregroundcolor Gray
     Write-Host ">>" -nonewline -foregroundcolor Red
 
     return " `b"
