@@ -1,29 +1,81 @@
 Windows Registry Editor Version 5.00
-; Values stored as 00-BB-GG-RR
+
 [HKEY_CURRENT_USER\Console]
-; BLACK   DGRAY
+"FaceName"="Microsoft YaHei Mono"
+"ScreenColors"=dword:0000000f
 "ColorTable00"=dword:0036342e
-"ColorTable08"=dword:00535755
-; DBLUE    BLUE
 "ColorTable01"=dword:00a46534
-"ColorTable09"=dword:00cf9f72
-; DGREEN   GREEN
 "ColorTable02"=dword:00069a4e
-"ColorTable10"=dword:0034e28a
-; DCYAN    CYAN
 "ColorTable03"=dword:009b930b
-"ColorTable11"=dword:00e9f500
-; DRED     RED
 "ColorTable04"=dword:000000cc
-"ColorTable12"=dword:002929ef
-; DMAGENTA MAGENTA
 "ColorTable05"=dword:007b5075
-"ColorTable13"=dword:00a87fad
-; DYELLOW  YELLOW
 "ColorTable06"=dword:0000a0c4
-"ColorTable14"=dword:004fe9fc
-; GRAY   WHITE
 "ColorTable07"=dword:00cfd7d3
+"ColorTable08"=dword:00535755
+"ColorTable09"=dword:00cf9f72
+"ColorTable10"=dword:0034e28a
+"ColorTable11"=dword:00e9f500
+"ColorTable12"=dword:002929ef
+"ColorTable13"=dword:00a87fad
+"ColorTable14"=dword:004fe9fc
 "ColorTable15"=dword:00eceeee
-; Alpha
-"WindowAlpha"=dword:000000e3
+"WindowAlpha"=dword:000000e6
+"CurrentPage"=dword:00000002
+"PopupColors"=dword:000000f5
+"InsertMode"=dword:00000001
+"QuickEdit"=dword:00000001
+"ScreenBufferSize"=dword:001c0064
+"WindowSize"=dword:001c0064
+"FontSize"=dword:00120000
+"FontFamily"=dword:00000036
+"FontWeight"=dword:00000190
+"CursorSize"=dword:00000019
+"HistoryBufferSize"=dword:00000019
+"NumberOfHistoryBuffers"=dword:00000004
+"HistoryNoDup"=dword:00000000
+"LineWrap"=dword:00000001
+"FilterOnPaste"=dword:00000001
+"CtrlKeyShortcutsDisabled"=dword:00000000
+"LineSelection"=dword:00000001
+"ForceV2"=dword:00000001
+"ExtendedEditKey"=dword:00000001
+
+[HKEY_CURRENT_USER\Console\%SystemRoot%_System32_WindowsPowerShell_v1.0_powershell.exe]
+"FaceName"="Microsoft YaHei Mono"
+"ScreenColors"=dword:0000000f
+"ColorTable00"=dword:0036342e
+"ColorTable01"=dword:00a46534
+"ColorTable02"=dword:00069a4e
+"ColorTable03"=dword:009b930b
+"ColorTable04"=dword:000000cc
+"ColorTable05"=dword:007b5075
+"ColorTable06"=dword:0000a0c4
+"ColorTable07"=dword:00cfd7d3
+"ColorTable08"=dword:00535755
+"ColorTable09"=dword:00cf9f72
+"ColorTable10"=dword:0034e28a
+"ColorTable11"=dword:00e9f500
+"ColorTable12"=dword:002929ef
+"ColorTable13"=dword:00a87fad
+"ColorTable14"=dword:004fe9fc
+"ColorTable15"=dword:00eceeee
+"WindowAlpha"=dword:000000e6
+"CurrentPage"=dword:00000002
+"PopupColors"=dword:000000f5
+"InsertMode"=dword:00000001
+"QuickEdit"=dword:00000001
+"ScreenBufferSize"=dword:001c0064
+"WindowSize"=dword:001c0064
+"FontSize"=dword:00120000
+"FontFamily"=dword:00000036
+"FontWeight"=dword:00000190
+"CursorSize"=dword:00000019
+"HistoryBufferSize"=dword:00000019
+"NumberOfHistoryBuffers"=dword:00000004
+"HistoryNoDup"=dword:00000000
+"LineWrap"=dword:00000001
+"FilterOnPaste"=dword:00000001
+"CtrlKeyShortcutsDisabled"=dword:00000000
+"LineSelection"=dword:00000001
+"ForceV2"=dword:00000001
+"ExtendedEditKey"=dword:00000001
